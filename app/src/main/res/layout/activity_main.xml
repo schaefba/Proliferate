@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/full_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout android:id="@+id/player_count_panel"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        tools:context="com.cschaefbauer.magic_counter.MainActivity">
+    
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="50dp"
+            android:text="Players" />
+        <TextView android:id="@+id/player_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button android:id="@+id/player_count_incr"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:onClick="incrementPlayerCount"/>
+            <Button android:id="@+id/player_count_decr"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:onClick="decrementPlayerCount"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <ListView android:id="@+id/player_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ListView>
+</LinearLayout>
